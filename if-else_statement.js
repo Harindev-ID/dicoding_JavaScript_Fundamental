@@ -31,3 +31,16 @@ const isMember = false;
 const discount = isMember ? 0.9 : 1;
 console.log(`Anda mendapatkan diskon sebesar ${discount * 100}%`)
 
+// truthy falsy
+
+let name = "";
+
+if (name) {
+    console.log(`Halo, ${name}`);
+} else {
+    console.log("Nama masih kosong");
+}
+
+/* output:
+Nama masih kosong
+ */
