@@ -41,6 +41,3 @@ if (name) {
     console.log("Nama masih kosong");
 }
 
-/* output:
-Nama masih kosong
- */
