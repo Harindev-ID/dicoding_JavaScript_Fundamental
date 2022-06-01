@@ -1,3 +1,5 @@
+// quis if else dicoding
+
 const stock = 0;
 const milkNeeded = 25;
 
@@ -14,3 +16,6 @@ const firstString = "Hello";
 const secondString = "JavaScript";
 
 console.log(firstString + secondString);
+
+// add more comment on this
+console.log("add comment")
