@@ -88,3 +88,16 @@ console.log(myArray6);
 [ 'Apple', <1 empty item>, 22, true, 'Programming' ]
 */
 
+/* keyword delete hanya menghapus data pada index yang ditentukan,
+   lalu membiarkan posisi tersebut kosong.
+   untuk menghapus elemen, gunakan metode splice()
+*/
+
+const myArray7 = ["Cokelat", 42.5, 22, true, "Programming"];
+
+myArray7.splice(2, 1);   // Menhapus dari index 2 sebanyak 1 elemen
+console.log(myArray7);
+
+/* output
+[ 'Cokelat', 42.5, true, 'Programming' ]
+*/
