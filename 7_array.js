@@ -76,3 +76,15 @@ pop keluarkan nilai array dari belakang/akhir
 shift keluarkan nilai array dari depan/awal
 unshift menambah nilai array dari depan/awal
 */
+
+// Menghapus data dari Array dengan delete
+
+const myArray6 = ["Cokelat", 42.5, 22, true, "Programming"];
+
+delete myArray6[1];
+console.log(myArray6);
+
+/* output
+[ 'Apple', <1 empty item>, 22, true, 'Programming' ]
+*/
+
