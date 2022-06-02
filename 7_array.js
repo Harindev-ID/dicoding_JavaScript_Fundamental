@@ -34,3 +34,14 @@ Programming
 undefined
 Panjang nilai myArray adalah 5.
 */
+
+// Memanipulasi nilai array dengan push
+
+const myArray3 = ["Cokelat", 42.5, 22, true, "Programming"];
+
+myArray.push('JavaScript');
+console.log(myArray);
+
+/* output
+[ 'Cokelat', 42.5, 22, true, 'Programming', 'JavaScript' ]
+ */
