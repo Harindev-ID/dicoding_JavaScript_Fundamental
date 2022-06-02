@@ -56,3 +56,23 @@ console.log(myArray4);
 /* output
 [ Orange, 42.5, 22, true ]
 */
+
+// Peraktek shift dan unsfhit
+
+const myArray5 = ["Cokelat", 42.5, 22, true, "Programming"];
+
+myArray5.shift();
+myArray5.unshift("Apple");
+
+console.log(myArray5);
+
+/* output
+[ 'Apple', 42.5, 22, true, 'Programming' ]
+*/
+
+/*
+push menambah nilai array dari belakang/akhir
+pop keluarkan nilai array dari belakang/akhir
+shift keluarkan nilai array dari depan/awal
+unshift menambah nilai array dari depan/awal
+*/
