@@ -31,3 +31,21 @@ console.log(firstName, lastName, age)
 /* output:
 John Doe 18
 */
+
+/*
+Penulisan sintaksis destructuring object pada ES6 menggunakan object literal ({ }) di sisi kiri dari operator assignment.
+*/
+
+const profile1 = {
+    firstName1: "John",
+    lastName1: "Doe",
+    age1: 18
+  }
+  
+  const {firstName1, lastName1, age1} = profile1;
+  
+  console.log(firstName1, lastName1, age1);
+  
+  /* output:
+  John Doe 18
+  */
