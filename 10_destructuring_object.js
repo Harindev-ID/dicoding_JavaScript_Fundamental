@@ -32,8 +32,3 @@ console.log(localLastName);
 console.log(localAge);
  
  
-/* output:
-John
-Doe
-18
-*/
