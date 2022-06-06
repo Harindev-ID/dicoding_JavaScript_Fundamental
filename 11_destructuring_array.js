@@ -28,3 +28,24 @@ console.log(thirdFood1);
 /* output:
 Nugget
 */
+
+/**
+ Destructuring Assignment
+Kita juga bisa melakukan destructuring assignment pada array. Namun, tidak seperti object, kita tidak perlu membungkusnya dengan tanda kurung. 
+Contohnya seperti berikut:
+ */
+
+const favorites2 = ["Seafood", "Salad", "Nugget", "Soup"];
+ 
+let myFood2 = "Ice Cream";
+let herFood2 = "Noodles";
+ 
+[myFood2, herFood2] = favorites2;
+ 
+console.log(myFood2);
+console.log(herFood2);
+console.log(favorites2);
+/* output:
+Seafood
+Salad
+*/
