@@ -79,3 +79,65 @@ Salad
  Nilai a: 2
  Nilai b: 1
  */
+
+ /**
+  * Dengan array destructuring assignment, kita bisa menukar nilai variabel dengan mudah tanpa membuat variabel tambahan.
+  */
+
+  let a2 = 1;
+  let b2 = 2;
+   
+  console.log("Sebelum swap");
+  console.log("Nilai a: " + a2);
+  console.log("Nilai b: " + b2);
+   
+  [a2, b2] = [b2, a2]
+   
+  console.log("Setelah swap");
+  console.log("Nilai a: " + a2);
+  console.log("Nilai b: " + b2);
+   
+  /* output
+  Sebelum swap
+  Nilai a: 1
+  Nilai b: 2
+  Setelah swap
+  Nilai a: 2
+  Nilai b: 1
+  */
+
+
+  /**
+   * Default Values
+   * Ketika melakukan destructuring array, tetapi terdapat variabel yang posisinya tidak dapat terjangkau oleh array, 
+   * maka variabel tersebut akan bernilai undefined. Contohnya:
+   */
+
+   const favorites3 = ["Seafood"];
+   const [myFood3, herFood3] = favorites3
+    
+   console.log(myFood3);
+   console.log(herFood3);
+    
+   /* output:
+   Seafood
+   undefined
+   */
+
+   /**
+    * Sama seperti object, 
+    * pada destructuring array kita juga dapat memberikan nilai default pada variabel yang tidak dapat terjangkau oleh array, 
+    * sehingga nilai pada variabel tidak akan menjadi undefined.
+    */
+
+    const favorites4 = ["Seafood"];
+ 
+    const [myFood4, herFood4 = "Salad"] = favorites4
+     
+    console.log(myFood4);
+    console.log(herFood4);
+     
+    /* output:
+    Seafood
+    Salad
+    */
