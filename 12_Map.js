@@ -40,3 +40,17 @@ England
 4
 India
  */
+
+// Contoh penggunaan map yg salah dibawah ini :
+const wrongMap = new Map();
+wrongMap["My Key"] = "My Value";
+
+console.log(wrongMap.has("My Key"));
+console.log(wrongMap.delete("My Key"));
+
+/* output
+false
+false
+ */
+
+// Jadi, pastikan untuk menggunakan metode .set() dan .get() untuk Map.
