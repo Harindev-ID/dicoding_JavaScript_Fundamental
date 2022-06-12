@@ -39,3 +39,19 @@ setTimeout(function() {
 Map(1) { { name: 'Jonas' } => 1 }
 */
 
+/**
+ * WeakMap tidak dapat dilihat secara langsung menggunakan console.log. 
+ * Ini merupakan issue yang terjadi pada Node.js (lihat: https://github.com/nodejs/node/issues/19001). 
+ * Itulah mengapa kami menggunakan fungsi inspect untuk melihat data yang ada di dalam WeakMap.
+
+Jika hasil output tidak sesuai dengan yang diharapkan pada kode, 
+hal itu disebabkan oleh waktu tunggu yang tidak cukup untuk menunjukkan cara kerja garbage collector. 
+Silakan simak penjelasan pada diskusi berikut: https://www.dicoding.com/academies/256/discussions/156523
+
+Seperti halnya WeakMap, WeakSet adalah versi weak reference dari Set. 
+Perbedaan antara WeakSet dan Set antara lain:
+
+- WeakSet tidak bisa menyimpan nilai primitif.
+- WeakSet bukan iterable dan hanya memiliki method add(), has(), dan delete().
+- WeakSet tidak memiliki properti size.
+ */
