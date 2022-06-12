@@ -28,21 +28,14 @@
 const restaurant = {
     name: "Shanghai Food",
     city: "Shanghai",
-    favoriteDrink: "Coffee Mochalatte",
-    favoriteFood: "Fried Rice",
+    "favorite drink": "Coffee Mochalatte",
+    "favorite food": "Fried Rice",
     isVegan: false,
 };
 
-restaurant.name = "Tiongkok Food";
-restaurant.favoriteDrink = "Juice Mango";
+const name = restaurant.name;
 
-const name = {
-    name: restaurant.name,
-}
-
-const favoriteDrink = {
-    favoriteDrink : restaurant.favoriteDrink,
-}
+const favoriteDrink = restaurant["favorite drink"]
 
 console.log(restaurant);
 console.log(name)
