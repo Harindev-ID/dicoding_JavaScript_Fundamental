@@ -29,3 +29,27 @@
   /* output
   Set(5) { 1, 4, 6, 5, 10 }
   */
+
+  /**
+   * Fungsi add() hanya menerima satu argumen. 
+   * Jika Anda memasukkan array, maka array tersebut akan dianggap sebagai satu elemen sendiri. 
+   * Nilai yang duplikat akan diabaikan.
+   */
+
+   const numberSet2 = new Set([1, 4, 6, 4, 1]);
+   numberSet2.add(5);
+   numberSet2.add(10);
+   numberSet2.add(6);
+   
+   numberSet2.delete(4);
+   
+   console.log(numberSet2);
+   
+   /* output
+   Set(4) { 1, 6, 5, 10 }
+   */
+
+   /** 
+    * Ingat bahwa Set tidak memiliki urutan atau index, 
+    * sehingga argumen yang dimasukkan ke dalam fungsi delete adalah nilai yang ingin dihapus, bukan index-nya.
+    *  */ 
