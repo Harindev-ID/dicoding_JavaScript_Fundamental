@@ -25,8 +25,28 @@
 
 
 // TODO
+const restaurant = {
+    name: "Shanghai Food",
+    city: "Shanghai",
+    favoriteDrink: "Coffee Mochalatte",
+    favoriteFood: "Fried Rice",
+    isVegan: false,
+};
 
+restaurant.name = "Tiongkok Food";
+restaurant.favoriteDrink = "Juice Mango";
 
+const name = {
+    name: restaurant.name,
+}
+
+const favoriteDrink = {
+    favoriteDrink : restaurant.favoriteDrink,
+}
+
+console.log(restaurant);
+console.log(name)
+console.log(favoriteDrink)
 /**
  * Jangan hapus kode di bawah ini
  */
