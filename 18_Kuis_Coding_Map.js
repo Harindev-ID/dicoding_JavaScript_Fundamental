@@ -20,8 +20,11 @@
     ['MYR', 3500],
 ]);
 
-console.log(myMap);
- 
+console.log(currency);
+
+let priceInIDR = (priceInJPY*currency.get('JPY'));
+
+console.log(priceInIDR)
  
  /**
   * Jangan hapus kode di bawah ini
