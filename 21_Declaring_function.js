@@ -46,12 +46,52 @@ Setelah membuat fungsi kita dapat memanggilnya dengan menuliskan nama fungsi dii
 
  */
 
-function greeting() {
+function greeting1() {
     console.log("Gutter morgen!")
 }
 
-greeting();
+greeting1();
 
 /* output
 Good Morning!
+*/
+
+/**
+ * Tetapi jika sebuah fungsi hanya menjalankan baris kode yang sama dirasa kurang fungsional, 
+ * bukan? Kita dapat membuat fungsi tersebut untuk menerima dan memanfaatkan parameter untuk mengubah perilaku dari fungsinya.
+
+Untuk menambahkan parameter pada fungsi, tambahkan variabel di dalam tanda kurung fungsi. 
+Namun, variabel tersebut tidak memerlukan keyword var, let, ataupun const. 
+Kita juga bisa menambahkan lebih dari satu parameter dengan memberikan tanda koma antar variabel parameternya. 
+
+Contohnya fungsi greeting akan kita tambahkan parameter name dan language seperti ini:
+
+function greeting(name, language) {
+    if(language === "English") {
+        console.log(`Good Morning ${name}!`);
+    } else if (language === "French") {
+        console.log(`Bonjour ${name}!`);
+    } else {
+        console.log(`Selamat Pagi ${name}!`);
+    }
+}
+
+
+Sehingga dalam memanggilnya pun kita perlu mengirimkan dua buah nilainya sebagai argumen:
+ */
+
+function greeting(name, language) {
+    if(language === "English") {
+        console.log(`Good Morning ${name}!`);
+    } else if (language === "French") {
+        console.log(`Bonjour ${name}!`);
+    } else {
+        console.log(`Selamat Pagi ${name}!`);
+    }
+}
+
+greeting("Harry", "French");
+
+/* output
+Bonjour Harry!
 */
