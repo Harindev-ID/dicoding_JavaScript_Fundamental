@@ -119,5 +119,5 @@ Cara kedua pada dasarnya menggunakan prototype,
 penggunaan sintaksis class pada javascript hanyalah syntactic sugar dari prototype itu sendiri..
 Demikianlah cara umum yang digunakan untuk menuliskan dan menginstansiasi objek dari sebuah Class.
 
-commit
+commit2
 **/
