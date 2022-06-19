@@ -157,4 +157,14 @@ mail2.sendMessage('hallo', 'penerima@dicoding.com');
 /**
 output-nya berhasil:
 you send: hallo to penerima@dicoding.com from pengirim@dicoding.com
+
+
+Kita tidak dapat langsung mengakses sendMessage tanpa melakukan instansiasi terlebih dahulu, misalkan:
+Mail.sendMessage('hallo', 'penerima@dicoding.com');
+/**
+output-nya error:
+TypeError: Mail.sendMessage is not a function
+
+commit
+
 **/
