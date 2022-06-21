@@ -17,5 +17,5 @@ const secondString = "JavaScript";
 
 console.log(firstString + secondString);
 
-// add more comment on this
+// add more comment on this -commi 
 console.log("add comment")
