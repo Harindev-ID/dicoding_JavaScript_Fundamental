@@ -164,7 +164,7 @@ Mail.sendMessage('hallo', 'penerima@dicoding.com');
 /**
 output-nya error:
 TypeError: Mail.sendMessage is not a function
+adsfads
 
-commit
 
 **/
