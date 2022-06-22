@@ -50,4 +50,63 @@ Begitu juga dengan objek Whatsapp juga mewarisi sifat dan perilaku yang sama.
 Namun, whatsapp bisa membuat grup, mengirim broadcast message sedangkan Email tidak.
 
 https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/original/academy/dos:1eef923564c565cea0e9992208e78fab20220613105547.png
+
+Dari contoh di atas, 
+misalkan kita ingin membuat 2 (dua) child class yaitu WhatsApp dan Email. 
+Maka dalam JavaScript cara menuliskan pewarisan terdapat 2 cara, yaitu sebagai berikut:
+
+// cara 1: menggunakan keyword `extends` jika menggunakan statement `class`
+class ChildClassName extends ParentClassName{}
+ 
+ 
+// cara 2: menggunakan `prototype` jika menggunakan statement `function` / `class`
+ChildClassName.prototype = new ParentClassName()
+
+Misalkan kita akan membuat sebuah child class bernama WhatsApp yang mewarisi kelas Mail. Maka contoh kodenya adalah sebagai berikut:
+
+class Mail {
+    constructor(author) {
+        this.from = author;
+        this._contacts = [];
+    }
+    sendMessage(msg, to) {
+        console.log(`you send: ${msg} to ${to} from ${this.from}`);
+        this._contacts.push(to);
+    }
+    showAllContacts() {
+        return this._contacts;
+    }
+}
+
+class WhatsApp extends Mail {
+    constructor() {
+        super();
+        this.username = 'dicoding';
+        this.isBussinessAccount = true;
+    }
+    myProfile() {
+        return `my name ${this.username}, is ${this.isBussinessAccount ? 'Business' : 'Personal'}`;
+    }
+}
+
+const wa1 = new WhatsApp(080111000222);
+console.log(wa1.myProfile());
+// my name dicoding, is Business
+
+Kita juga dapat mengakses attribute maupun method dari parent class yang Accessible. Misalkan:
+wa1.sendMessage('halo', 089000999888);
+
 */
+
+/**
+ * Polymorphism
+ * 
+Polymorphism dalam bahasa Yunani berarti “banyak bentuk”. 
+Sederhananya objek dapat memiliki bentuk atau implementasi yang berbeda-beda pada satu metode yang sama. 
+Semua jenis Mail dapat mengirim pesan, namun whatsapp, email, 
+sms tentunya memiliki cara yang berbeda dalam mengirim pesan, 
+
+misalkan: whatsapp dapat mengirim pesan suara sedangkan yang lainnya tidak, 
+email dapat menyaring konten spam saat mengirim pesan sedangkan yang lain tidak. 
+Perbedaan bentuk atau cara mengirim pesan tersebut merupakan contoh dari polymorphism.
+ */
