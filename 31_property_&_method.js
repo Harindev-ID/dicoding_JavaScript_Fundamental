@@ -164,7 +164,65 @@ Mail.sendMessage('hallo', 'penerima@dicoding.com');
 /**
 output-nya error:
 TypeError: Mail.sendMessage is not a function
-adsfads
 
+------------
+Static Method
+Static method adalah function atau method yang sama seperti class method, akan tetapi untuk mengaksesnya tidak perlu meng-instantiate class. Kita cukup menuliskan nama kelas dan nama method-nya secara langsung (NamaClass.namaMethod()).
 
+Sebagai contoh, kita menambahkan sebuah method untuk memeriksa apakah sebuah input adalah nomor handphone:
+
+class Mail{
+  static isValidPhone(phone) {
+    return typeof phone === 'number';
+  }
+}
+
+Dari contoh di atas, kita dapat memanggil fungsi tersebut tanpa membuat instance kelas Mail terlebih dahulu.
+Mail.isValidPhone(089000000000) //true
+-------------
+
+Constructor
+
+Ketika kita membuat sebuah objek, 
+adakalanya karakteristik dari blueprint yang kita buat harus sudah didefinisikan bersamaan dengan sebuah objek saat pertama kali diinisiasi. 
+Constructor adalah sebuah method/function yang dijalankan pertama kali ketika object dibuat. 
+Dari contoh kelas yang kita buat sebelumnya, 
+kita akan membuat from sebagai sebuah value yang harus ditulis ketika sebuah objek diinisiasi. Maka dalam JavaScript ada dua cara, yaitu:
+
+// cara 1, jika kita menggunakan statement class
+class YourClassName{
+  constructor(params1, params2, ....) {
+    // do something here
+  };
+}
+ 
+// cara 2, jika kita menggunakan statement function
+function Mail(params1, params2, ....) {
+    this.yourPropertyName = params1;
+  // do something here
+}
+
+Contoh penerapannya sebagai berikut:
+// cara 1
+class Mail {
+    constructor(author) {
+        this.from = author;
+        console.log('is instantiated', author);
+    };
+}
+ 
+// cara 2
+function Mail(author) {
+    this.from = author;
+    console.log('is instantiated', author);
+}
+
+Dari contoh constructor di atas, maka cara pemanggilannya menjadi seperti di bawah ini:
+const mail1 = new Mail("emailku@dicoding.com");
+
+Karena JavaScript bukan bahasa dengan dukungan static type, 
+maka sebenarnya kita dapat melakukan instansiasi dengan parameter sesuka kita:
+
+const mail1 = new Mail(085000111222); // misalkan untuk SMS
+const mail2 = new Mail("emailku@dicoding.com"); // misalkan untuk Email
 **/
