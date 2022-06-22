@@ -59,7 +59,7 @@ class Mail {
   
   class WhatsApp extends Mail {
     constructor(username, isBussinessAccount, phoneNumber) {
-        super();
+        super(phoneNumber);
         this.username = username;
         this.isBussinessAccount = isBussinessAccount;
     }
@@ -68,3 +68,20 @@ class Mail {
   const wa1 = new WhatsApp('dicoding', true, 6281111111);
   
   console.log(wa1.from); // undefined
+
+  /**
+   * Ups! Hasilnya undefined. 
+   * Hal itu terjadi karena constructor pada kelas parent kita sudah tergantikan dengan constructor turunannya. 
+   * Solusinya, kita dapat memanfaatkan operator super() dengan memberikan nilai yang dibutuhkan untuk mengeksekusi constructor parent-nya. 
+   * Sehingga constructor parent tetap terpanggil dengan benar.
+
+    Silakan ubah constructor pada kelas WhatsApp menjadi seperti ini.
+
+    constructor(username, isBussinessAccount, phoneNumber) {
+        super(phoneNumber);
+        this.username = username;
+        this.isBussinessAccount = isBusinessAccount;
+    }
+
+    Jalankan kembali kode pada interactive code dan kini hasilnya sudah tidak undefined lagi.
+   */
