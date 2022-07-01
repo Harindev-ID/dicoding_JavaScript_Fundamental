@@ -84,5 +84,46 @@ class Mail {
     }
 
     Jalankan kembali kode pada interactive code dan kini hasilnya sudah tidak undefined lagi.
-    commit
+   
+    ------------------------------
+
+    Overriding Method
+Hampir sama dengan overriding constructor, tetapi yang di-override di sini adalah method yang ada pada parent class. Pada dasarnya semua method yang ada pada kelas parent dapat diakses langsung di child kelasnya (as is).
+
+super.methodName();
+Kadang kita tidak menggunakan sebuah method seutuhnya sama seperti parent kelasnya. Namun, kita dapat menambahkan perintah tertentu ataupun menguranginya. Berikut merupakan contoh override pada method sendMessage.
+
+class WhatsApp extends Mail {
+    constructor(username, isBussinessAccount, phoneNumber) {
+        super(phoneNumber);
+        this.username = username;
+        this.isBussinessAccount = isBussinessAccount;
+    }
+ 
+    // Overriding method => Melakukan Override Total
+    sendMessage(msg, to) {
+        console.log('Send by WA');
+    }
+}
+Ketika kita memanggil method sendMessage pada contoh di atas, ia hanya akan mengeksekusi kode yang ada pada child class.
+
+const wa1 = new WhatsApp('di', true, '089000999888');
+wa1.sendMessage('halo', '089000999888');
+ 
+/**
+Output:
+Send by WA
+
+Untuk tetap melakukan eksekusi kode pada parent class maka perlu menggunakan operator super.methodName().
+
+sendMessage(msg, to) {
+    super.sendMessage(msg, to);
+    console.log('Send by WA');
+}
+Catatan:
+
+super(...) digunakan untuk memanggil constructor parent dan hanya dapat digunakan di constructor.
+
+super.methodName(...) digunakan untuk memanggil parent method.
+
    */
