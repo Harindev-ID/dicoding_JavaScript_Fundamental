@@ -60,4 +60,4 @@ const YourClassName = (paramA, paramB) => {
 /*
 Sebagai contoh, dari hirarki Mail yang sudah kita buat sebelumnya. kita akan merombak dan membuatnya dengan pendekatan Object composition.
  
-.*/
+...*/
