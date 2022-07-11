@@ -31,7 +31,7 @@ const isMember = false;
 const discount = isMember ? 0.9 : 1;
 console.log(`Anda mendapatkan diskon sebesar ${discount * 100}%`)
 
-// truthy falsy
+// truthy falsy..
 
 let name = "";
 
