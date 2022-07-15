@@ -14,8 +14,8 @@ Pada dasarnya konsep yang harus dilakukan adalah:
 
 Memisahkan fungsi-fungsi umum yang biasa digunakan.
 const yourGenericAction = params => ({
-  actionA: () => { /** do action A **/},
-  actionB: () => { /** do action B **/},  
+  //actionA: () => { /** do action A **///},
+  //actionB: () => { /** do action B **///},  
 // });
 /** 
 Membuat Class seperti biasa.
@@ -38,9 +38,9 @@ const YourClassName = (paramA, paramB) => {
   };
   
   const yourSpecificActions = self => ({
-    specificActionA: { /** do action A **/},
-  });
-}
+    specificActionA: { /** do action A **///},
+ // });
+//}
 
 /** 
 Membuat kumpulan attribute, generic method, dan spesific method menjadi satu objek.
@@ -51,8 +51,9 @@ const YourClassName = (paramA, paramB) => {
   };
   
   const yourSpecificActions = self => ({
-    specificActionA: { /** do action A **/},
-  });
+ //   specificActionA: { /** do action A **/ //},
+
+ // });
 /*  
   return Object.assign(self, yourGenericAction(self), yourSpecificActions(self))
 }
@@ -60,4 +61,5 @@ const YourClassName = (paramA, paramB) => {
 /*
 Sebagai contoh, dari hirarki Mail yang sudah kita buat sebelumnya. kita akan merombak dan membuatnya dengan pendekatan Object composition.
  
+https://dicoding-web-img.sgp1.cdn.digitaloceanspaces.com/original/academy/dos:a3591c78205225c905d16e233e42a85d20220613105627.png
 ....*/
