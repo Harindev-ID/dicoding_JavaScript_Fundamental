@@ -97,3 +97,4 @@ console.log(myEagle.fly());
 module.exports = {
   Animal, Rabbit, Eagle, myRabbit, myEagle,
 };
+ 
