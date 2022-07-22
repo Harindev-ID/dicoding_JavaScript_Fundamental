@@ -41,6 +41,7 @@ yakni nilai PI. Bila nilai PI berubah, maka penggunaan fungsi menghasilkan nilai
 Lantas, bagaimana cara membuat fungsi tersebut menjadi pure? Mudah!
  */
 
+/*
 const hitungLuasLingkaran = (jariJari) => {
     return 3.14 * (jariJari * jariJari); 
   }
@@ -62,6 +63,7 @@ Pure function tidak boleh menimbulkan efek samping (no side effect) ketika digun
 Untuk lebih jelasnya, coba lihat contoh kode berikut:
  */
 
+/*
 const createPersonWithAge = (age, person) => {
     person.age = age;
     return person;
@@ -97,6 +99,7 @@ Lalu bagaimana cara membuat fungsi tersebut menjadi pure?
 Mudah, kita manfaatkan destructuring object daripada mengubah objek tersebut secara langsung.
  */
 
+/*
 const createPersonWithAge = (age, person) => {
     return { ...person, age };
   };
@@ -145,6 +148,7 @@ alih-alih ia mengubah nilai dari array itu sendiri,
 malah ia membuat atau menghasilkan array baru.
  */
 
+/*
 const names = ['Harry', 'Ron', 'Jeff', 'Thomas'];
 
 const newNamesWithExcMark = names.map((name) => `${name}!`);
@@ -165,7 +169,7 @@ console.log({
 /**
  * Lantas, bagaimana bila kita benar-benar perlu mengubah nilai dari sebuah objek? Contohnya seperti ini:
  */
-
+/*
  const user = {
     firstname: 'Harry',
     lastName: 'Protter', // ups, typo!
@@ -193,6 +197,7 @@ console.log(user);
  * terapkan perubahan tersebut pada nilai return dalam objek baru.
  */
 
+/** 
  const user = {
     firstname: 'Harry',
     lastName: 'Protter', // ups, typo!
