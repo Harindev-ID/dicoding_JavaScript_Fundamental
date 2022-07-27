@@ -147,6 +147,8 @@ console.log(totalScore);
 > Array some
 array.some() merupakan fungsi bawaan dari array yang cukup sering digunakan. Fungsi ini akan menghasilkan nilai boolean.
 
-
+arr.some(callback(element, [index], [array]), [thisArg])
+ 
+// [...] adalah opsional parameter....
  */
  
