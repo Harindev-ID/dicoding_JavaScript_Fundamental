@@ -139,10 +139,10 @@ const totalScore = students.reduce((acc, student) => acc + student.score, 0);
 console.log(totalScore);
 
 /**
- * output:
+ * output:   
  * 313
  * 
- ----------------------
+ -------------------------
 
 > Array some
 array.some() merupakan fungsi bawaan dari array yang cukup sering digunakan. Fungsi ini akan menghasilkan nilai boolean.
