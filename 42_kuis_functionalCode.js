@@ -31,7 +31,7 @@
   
   
   /**
-   * Jangan hapus kode di bawah ini
+   * Jangan hapus kode di bawah ini! oke
    */
   
   module.exports = { books, greatAuthors };
