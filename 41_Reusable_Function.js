@@ -29,7 +29,7 @@ fungsi map akan mengembalikan array baru.
 Nilai tiap item pada array yang dikembalikan, 
 dihasilkan dari kembalian callback function-nya. 
 Karena callback function dapat mengakses item array, 
-biasanya developer menggunakannya untuk menghasilkan nilai baru
+biasanya developer menggunakannya untuk menghasilkan nilai baru.
  */
 
 const newArray = ['Harry', 'Ron', 'Jeff', 'Thomas'].map((name) => { return `${name}!`});
