@@ -2,7 +2,7 @@
   "name": "coffemachine",
   "version": "1.0.0",
   "description": "learn npm dicoding javascript environment",
-  "main": "10_destructuring_object.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
