@@ -1,0 +1,23 @@
+{
+  "name": "coffemachine",
+  "version": "1.0.0",
+  "description": "learn npm dicoding javascript environment",
+  "main": "10_destructuring_object.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Harindev-ID/dicoding_JavaScript_Fundamnetal.git"
+  },
+  "keywords": [
+    "setup",
+    "environment"
+  ],
+  "author": "denny aditya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Harindev-ID/dicoding_JavaScript_Fundamnetal/issues"
+  },
+  "homepage": "https://github.com/Harindev-ID/dicoding_JavaScript_Fundamnetal#readme"
+}
