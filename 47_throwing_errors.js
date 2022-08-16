@@ -68,7 +68,36 @@ Untuk mengatasinya, kita bisa menggunakan throw. Operator ini akan “melemparka
 sehingga eksekusi kode akan masuk pada blok catch. Berikut ini adalah contoh mengimplementasikan throw untuk menimbulkan eror kita sendiri:
  */
 
-let json = '{ "age": 20 }';
+// let json = '{ "age": 20 }';
+ 
+// try {
+//     let user = JSON.parse(json);
+ 
+//     if (!user.name) {
+//         throw new SyntaxError("'name' is required.");
+//     }
+ 
+//     console.log(user.name); // undefined
+//     console.log(user.age);  // 20
+// } catch (error) {
+//     console.log(`JSON Error: ${error.message}`);
+// }
+ 
+/* output
+JSON Error: 'name' is required.
+*/
+
+/**
+ Ketika properti user.name tidak memiliki nilai, maka program akan menghasilkan SyntaxError. 
+ Di dalamnya kita bisa menentukan pesan yang dapat membantu menjelaskan apa eror yang terjadi.
+
+Sekarang kita telah mengetahui ada banyak kemungkinan eror yang bisa muncul dalam sebuah program. 
+Tentunya akan sangat membantu jika kita bisa memberikan pesan yang sesuai kepada pengguna atau kepada diri kita sendiri untuk menemukan kesalahan dengan lebih mudah.
+
+Sekarang anggaplah json sudah sesuai, tetapi ternyata ada eror lain yang terjadi, misalnya karena variabel yang belum terdefinisi.
+ */
+
+let json = '{ "name": "Yoda", "age": 20 }';
  
 try {
     let user = JSON.parse(json);
@@ -77,12 +106,14 @@ try {
         throw new SyntaxError("'name' is required.");
     }
  
-    console.log(user.name); // undefined
+    errorCode;
+ 
+    console.log(user.name); // Yoda
     console.log(user.age);  // 20
 } catch (error) {
     console.log(`JSON Error: ${error.message}`);
 }
  
 /* output
-JSON Error: 'name' is required.
+JSON Error: errorCode is not defined
 */
