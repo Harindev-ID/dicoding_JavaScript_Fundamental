@@ -7,3 +7,4 @@ const coffeeStock = {
 const isCoffeeMachineReady = true;
 
 module.exports = {coffeeStock, isCoffeeMachineReady};
+// .
