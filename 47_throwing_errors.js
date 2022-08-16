@@ -117,3 +117,24 @@ try {
 /* output
 JSON Error: errorCode is not defined
 */
+
+/**
+Eror berhasil ditangani, tetapi konsol tetap menampilkan pesan “JSON Error”, 
+lantas bagaimana kita bisa menampilkan pesan eror sesuai eror yang muncul?
+
+Jawabannya adalah dengan if statement.
+ */
+
+try {
+    // ...
+} catch (error) {
+    if (error instanceof SyntaxError) {
+        console.log(`JSON Error: ${error.message}`);
+    } else if (error instanceof ReferenceError) {
+        console.log(error.message);
+    } else {
+        console.log(error.stack);
+    }
+}
+
+// Dengan operator instanceOf, kita bisa mendapatkan tipe dari eror yang terjadi. Dari sana kita bisa membuat percabangan bagaimana cara menangani erornya.
