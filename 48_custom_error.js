@@ -87,4 +87,7 @@ try {
  
 /* output
 Invalid data: 'name' is required.
+
+Sekarang kode untuk menangani error menjadi lebih baik bukan? 
+Penggunaan instanceOf akan memberikan hasil eror yang lebih detail dan sesuai dengan eror yang terjadi.
 */
