@@ -57,14 +57,18 @@ const validateNumberInput = (a, b, c) => {
     if (typeof b !== "number") {
       throw new ValidationError('Argumen kedua harus number')
     }
-    if (typeof c !== "number ") {
+    if (typeof c !== "number") {
       throw new ValidationError ('Argumen ketiga harus number')
     }
 }
 
 const detectTriangle = (a, b, c) => {
     // TODO 3
-  
+    try {
+        validateNumberInput (a,b,c)  
+      } catch(error) {
+        return error.message;
+      }
     if (a === b && b === c) {
       return 'Segitiga sama sisi';
     }
