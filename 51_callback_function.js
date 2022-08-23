@@ -47,3 +47,24 @@ Ia diperintahkan pada sebuah fungsi asynchronous kemudian akan dipanggil/digunak
 
 Bagaimana cara menerapkannya dalam kode? Pertama, kita tambahkan parameter dengan nama callback pada fungsi asynchronous.
 */
+
+/*
+const orderCoffee = callback => {
+    let coffee = null;
+    console.log("Sedang membuat kopi, silakan tunggu...");
+    setTimeout(() => {
+        coffee = "Kopi sudah jadi!";
+    }, 3000);
+    return coffee;
+}
+*/
+
+// Kemudian kita panggil atau gunakan callback yang diisikan dengan data yang akan dibawa (coffee) ketika task selesai dilakukan.
+
+/*
+setTimeout(() => {
+    coffee = "Kopi sudah jadi!";
+    callback(coffee);
+}, 3000);
+*/
+
