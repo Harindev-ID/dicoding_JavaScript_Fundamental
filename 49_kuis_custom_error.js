@@ -50,7 +50,6 @@ class ValidationError extends Error {
         this.name = 'ValidationError'
 // TODO 2
 const validateNumberInput = (a, b, c) => {
-
     if (typeof a !== "number") {
         throw new ValidationError('Argumen pertama harus number')
     }
