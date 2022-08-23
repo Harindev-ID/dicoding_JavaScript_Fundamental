@@ -46,8 +46,10 @@
 // TODO 1
 class ValidationError extends Error {
     constructor(message) {
-        super(message)
-        this.name = 'ValidationError'
+        super(message);
+        this.name = 'ValidationError';
+    }
+}
 // TODO 2
 const validateNumberInput = (a, b, c) => {
     if (typeof a !== "number") {
