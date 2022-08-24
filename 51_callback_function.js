@@ -77,5 +77,16 @@ const orderCoffee = callback => {
         callback(coffee);
     }, 3000);
 }
+
+Kemudian untuk menggunakan fungsi orderCoffee, ubah kode dari:
+
+const coffee = orderCoffee();
+console.log(coffee);
+
+Menjadi:
+
+orderCoffee(coffee => {
+    console.log(coffee);
+});
 */
 
