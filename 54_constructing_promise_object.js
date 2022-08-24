@@ -42,6 +42,14 @@ Executor function akan berjalan secara asynchronous hingga akhirnya kondisi Prom
 
 Pada contoh kode di atas, outputnya akan seperti ini:
 
+/* output
+Promise { 'Kopi berhasil dibuat' }
+
+Kenapa demikian? Executor function mengeksekusi resolve() 
+dengan membawa data string “Kopi berhasil dibuat”. 
+Jika kita ubah nilai dari variabel isCoffeeMakerReady menjadi false, 
+maka executor function akan mengeksekusi reject() dengan membawa pesan penolakan “Mesin kopi tidak bisa digunakan”.
 */
+
 
 
