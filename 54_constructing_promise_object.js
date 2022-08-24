@@ -49,6 +49,19 @@ Kenapa demikian? Executor function mengeksekusi resolve()
 dengan membawa data string “Kopi berhasil dibuat”. 
 Jika kita ubah nilai dari variabel isCoffeeMakerReady menjadi false, 
 maka executor function akan mengeksekusi reject() dengan membawa pesan penolakan “Mesin kopi tidak bisa digunakan”.
+
+/* output
+Promise { <rejected> 'Mesin kopi tidak bisa digunakan' }
+
+https://www.dicoding.com/academies/256/tutorials/14022?from=14017#
+
+Dalam praktik aslinya, Promise digunakan untuk menjalankan proses asynchronous seperti mengambil data dari internet/API. 
+Hasil permintaan data dapat terpenuhi atau mengalami kegagalan.
+
+Output yang dihasilkan baik ketika fulfilled ataupun rejected masih berupa Promise, 
+bukan nilai yang dibawa oleh fungsi resolve atau reject. 
+Lantas bagaimana kita bisa mengakses nilai yang dibawa oleh fungsi-fungsi tersebut? 
+Caranya adalah menggunakan method .then() yang tersedia pada objek Promise.
 */
 
 
