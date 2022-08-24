@@ -17,4 +17,70 @@ Keduanya adalah callback function yang juga dikenal sebagai handler. Handler per
 Kembali ke kasus mesin kopi kita sebelumnya, mesin bisa gagal membuat kopi jika bahan-bahan tidak mencukupi. Sementara jika bahan cukup, mesin akan membuatkan satu gelas kopi. Di sinilah kita dapat memanfaatkan Promise sekaligus menangani dua kemungkinan promise yang terjadi.
 
 Mari kita buat object untuk menyimpan stok dan fungsi yang mengembalikan objek Promise.
+
+const stock = {
+    coffeeBeans: 250,
+    water: 1000,
+}
+ 
+const checkStock = () => {
+    return new Promise((resolve, reject) => {
+        if (stock.coffeeBeans >= 16 && stock.water >= 250) {
+            resolve("Stok cukup. Bisa membuat kopi");
+        } else {
+            reject("Stok tidak cukup");
+        }
+    });
+};
+
+Kemudian di bawahnya kita tambahkan dua fungsi untuk menangani masing-masing status resolve dan reject.
+
+const handleSuccess = resolvedValue => {
+    console.log(resolvedValue);
+}
+ 
+const handleFailure = rejectionReason => {
+    console.log(rejectionReason);
+}
+
+Terakhir panggil method .then() pada checkStock() untuk menangani hasil yang dikembalikan dari promise.
+
+checkStock().then(handleSuccess, handleFailure);
+
+Sehingga, keseluruhan kode akan menjadi seperti ini:
+*/
+
+const stock = {
+    coffeeBeans: 250,
+    water: 1000,
+}
+ 
+const checkStock = () => {
+    return new Promise((resolve, reject) => {
+        if (stock.coffeeBeans >= 16 && stock.water >= 250) {
+            resolve("Stok cukup. Bisa membuat kopi");
+        } else {
+            reject("Stok tidak cukup");
+        }
+    });
+};
+ 
+const handleSuccess = resolvedValue => {
+    console.log(resolvedValue);
+}
+ 
+const handleFailure = rejectionReason => {
+    console.log(rejectionReason);
+}
+ 
+checkStock().then(handleSuccess, handleFailure);
+
+/*
+Mari kita bedah kode di atas:
+
+checkStock() merupakan fungsi yang mengembalikan promise dan akan menghasilkan resolve() dengan membawa nilai “Stok cukup. Bisa membuat kopi”.
+Lalu kita mendeklarasikan fungsi handleSuccess() dan handleFailure() yang mencetak nilai dari parameternya.
+Kemudian kita memanggil method .then() dari checkStock. Isi parameter then() dengan dua fungsi handler yang telah kita buat sebelumnya.
+Parameter pertama berisi fungsi handleSuccess untuk menangani kondisi ketika promise berstatus resolve. Parameter kedua berisi fungsi handleFailure yang menangani ketika promise berstatus reject.
+Cobalah untuk mengubah nilai stock dan memastikan fungsi handleFailure telah dijalankan.
  */
