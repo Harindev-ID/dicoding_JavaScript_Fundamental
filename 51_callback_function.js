@@ -66,5 +66,16 @@ setTimeout(() => {
     coffee = "Kopi sudah jadi!";
     callback(coffee);
 }, 3000);
+
+Setelah menggunakan callback, fungsi tidak perlu lagi mengembalikan nilai. Sehingga, kita bisa menghapus kode return coffee;. Keseluruhan fungsi akan tampak seperti ini:
+
+const orderCoffee = callback => {
+    let coffee = null;
+    console.log("Sedang membuat kopi, silakan tunggu...");
+    setTimeout(() => {
+        coffee = "Kopi sudah jadi!";
+        callback(coffee);
+    }, 3000);
+}
 */
 
