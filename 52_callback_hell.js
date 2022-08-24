@@ -50,3 +50,9 @@ function makeACake(...rawIngredients) {
         .then(bakeACake)
         .then(console.log);
 }
+
+/**
+Dengan Promise, kita dapat meminimalisir callback hell dan 
+mengubahnya menjadi kode yang sangat mudah dibaca. 
+Bahkan dengan kode seperti itu, non-developer pun dapat mengerti apa maksud dari kode tersebut.
+*/
