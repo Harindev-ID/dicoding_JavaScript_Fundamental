@@ -70,5 +70,55 @@ makeCoffee();
 /* output
 Kopi didapatkan!
 
+Async-await memungkinkan kita menuliskan proses asynchronous layaknya proses synchronous. Kira-kira kode program kita akan seperti berikut:
 
+function makeCoffee() {
+    const coffee = getCoffee();
+    console.log(coffee);
+}
+ 
+makeCoffee();
+ 
+/* output
+Promise { <pending> }
+
+Namun, ketika kode di atas dijalankan hasilnya tidak akan sesuai yang kita harapkan karena fungsi getCoffee() merupakan object Promise. 
+Untuk menunggu fungsi getCoffee() yang berjalan secara asynchronous, tambahkan keyword await sebelum pemanggilan fungsi getCoffee().
+
+const coffee = await getCoffee();
+
+Kemudian, karena fungsi makeCoffee() sekarang menangani proses asynchronous, 
+maka fungsi  tersebut juga menjadi fungsi asynchronous. 
+Tambahkan async sebelum deklarasi fungsi untuk membuatnya menjadi asynchronous.
+
+async function makeCoffee() { … }
+
+Dengan perubahan di atas, kita telah berhasil menuliskan proses asynchronous dengan gaya synchronous.
+
+async function makeCoffee() {
+    const coffee = await getCoffee();
+    console.log(coffee);
+}
+ 
+makeCoffee();
+ 
+/* output
+Kopi didapatkan!
+
+----------
+
+Keyword async digunakan untuk memberitahu JavaScript supaya menjalankan fungsi makeCoffee() secara asynchronous.
+Lalu, keyword await digunakan untuk menghentikan proses pembacaan kode selanjutnya sampai fungsi getCoffee() mengembalikan nilai promise resolve.
+
+Walaupun await menghentikan proses pembacaan kode selanjutnya pada fungsi makeCoffee, 
+tetapi ini tidak akan mengganggu proses runtime sesungguhnya pada JavaScript (global). 
+Karena fungsi makeCoffee berjalan secara asynchronous, 
+kita tidak dapat menggunakan await tanpa membuat function dalam scope-nya berjalan secara asynchronous.
+--------------------------------------
+Handle onRejected using async-await
+Perlu jadi catatan bahwa await hanya akan mengembalikan nilai jika promise berhasil dilakukan (onFulfilled). 
+Lantas bagaimana jika promise gagal dilakukan (onRejected)? Caranya cukup sederhana. Kembali lagi kepada prinsip synchronous code. 
+Kita dapat menangani sebuah eror atau tolakan dengan menggunakan try...catch.
+
+Ketika menggunakan async/await, biasakan ketika mendapatkan resolved value dari sebuah promise, untuk menempatkannya di dalam blok try seperti ini:
 */
