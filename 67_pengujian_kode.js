@@ -63,6 +63,47 @@ test('it should return exact average', () => {
 Untuk menjalankan kode pengujian tersebut, dapat menjalankan perintah runner yang sudah kita buat sebelumnya.
 
 npm run test
+https://d17ivq9b7rppb3.cloudfront.net/original/academy/20210331111923fd3607246fae2bb3188ee69aa8f00145.jpeg
+
+Dari contoh di atas, kita dapat melihat bahwa test case tersebut sesuai ekspektasi. Selain itu, kita juga dapat membuat multiple case dengan membuat tes yang lain, misalnya dengan kode berikut:
+
+test('it should handle non-number ', () => {
+    const listValueOfExams = [80, 'a', '100', 80];
+    expect(() => averageExams(listValueOfExams)).toThrow();
+})
+
+Integration test dapat dijalankan ataupun ditulis bersamaan dengan unit test. Sehingga kita dapat melakukan grouping dari contoh kode diatas menjadi sebagai berikut:
+
+const { averageExams, isStudentPassExam } = require('../gradeCalculations');
+ 
+describe('grade calculations', () => {
+    test('it should return exact average', () => {
+        const listValueOfExams = [80, 100, 100, 80];
+        expect(averageExams(listValueOfExams)).toEqual(90);
+    });
+ 
+    /**
+     * Integration testing *
+     
+     test('it should return exam passed status', () => {
+        const listValueOfExams = [80, 100, 100, 80];
+        expect(isStudentPassExam(listValueOfExams, 'Budi')).toEqual(true);
+    })
+ 
+ 
+    test('it should return exam failed status', () => {
+        const listValueOfExams = [50, 40, 70, 80];
+        expect(isStudentPassExam(listValueOfExams, 'Budi')).toEqual(false);
+    })
+})
 
 
+Setelah menuliskan semua test case yang ada, dengan jest kita dapat melihat laporan kode yang sudah terdapat pengujian dengan cara sebagai berikut:
+
+npm run test -- --coverageSetelah prosesnya selesai, jest akan secara otomatis men-generate laporan pengujian dalam folder coverage. Dalam folder tersebut terdapat:
+
+index.html berisi laporan test secara keseluruhan (1 proyek).
+fungsiDiTest.js.html berisi laporan test per kode pengujian.
+
+https://d17ivq9b7rppb3.cloudfront.net/original/academy/20210331112215d37e5f192971123568d1aa17b69ce45d.jpeg
  */
