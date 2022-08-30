@@ -21,5 +21,11 @@
   "bugs": {
     "url": "https://github.com/Harindev-ID/dicoding_JavaScript_Fundamnetal/issues"
   },
-  "homepage": "https://github.com/Harindev-ID/dicoding_JavaScript_Fundamnetal#readme"
+  "homepage": "https://github.com/Harindev-ID/dicoding_JavaScript_Fundamnetal#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "jest": "^29.0.1"
+  }
 }
