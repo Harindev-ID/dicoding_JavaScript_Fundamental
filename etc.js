@@ -1,13 +1,9 @@
-function fetchUsername() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve('JSUser');
-        }, 3000);
-    })
+function findMax(a, b, c) {
+    if (a > b && b > c) {
+        return a;
+    } else if (b > a && a > c) {
+        return b;
+    } else {
+        return c;
+    }
 }
-
-console.log("Fetching username...");
-fetchUsername().then((value) => {
-    console.log(`You are logged in as ${value}`);
-})
-console.log("Welcome!");
