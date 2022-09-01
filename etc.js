@@ -1,8 +1,4 @@
-function multiply(num) {
-    total = num * num;
-}
+const name = 'Dicoding';
+const language = 'JavaScript';
 
-const result = multiply(3);
-
-console.log(result);
-//
+console.log(`Hello $name. Welcome to $language!`);
