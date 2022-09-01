@@ -1,4 +1,13 @@
-const name = 'Dicoding';
-const language = 'JavaScript';
+function fetchUsername() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('JSUser');
+        }, 3000);
+    })
+}
 
-console.log(`Hello $name. Welcome to $language!`);
+console.log("Fetching username...");
+fetchUsername().then((value) => {
+    console.log(`You are logged in as ${value}`);
+})
+console.log("Welcome!");
