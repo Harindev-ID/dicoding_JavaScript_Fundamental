@@ -5,4 +5,4 @@ function multiply(num) {
 const result = multiply(3);
 
 console.log(result);
-//sdsds
+//
