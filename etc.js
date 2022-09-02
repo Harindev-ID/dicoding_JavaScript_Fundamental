@@ -1,15 +1,11 @@
-function fetchUsername() {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve('JSUser');
-        }, 3000);
-    })
+const stock = 0;
+const milkNeeded = 25;
+
+if (stock > milkNeeded) {
+  stock = stock - milkNeeded;
+  console.log('Processing your order...');
+} else {
+  console.log('Out of Stock!');
 }
 
-console.log("Fetching username...");
-fetchUsername().then((value) => {
-    console.log(`You are logged in as ${value}`);
-})
-.finally(() => {
-    console.log("Welcome!");
-})
+console.log('Thank you');
