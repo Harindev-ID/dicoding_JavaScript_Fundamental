@@ -1,9 +1,4 @@
-function findMax(a, b, c) {
-    if (a > b && b > c) {
-        return a;
-    } else if (b > a && a > c) {
-        return b;
-    } else {
-        return c;
-    }
-}
+const name = 'Dicoding';
+const language = 'JavaScript';
+
+console.log(`Hello $name. Welcome to $language!`);
