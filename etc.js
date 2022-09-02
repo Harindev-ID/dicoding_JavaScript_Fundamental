@@ -1,4 +1,12 @@
-const name = 'Dicoding';
-const language = 'JavaScript';
+class MyCustomError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = "MyError";
+    }
+}
 
-console.log(`Hello $name. Welcome to $language!`);
+try {
+    throw new MyCustomError("This is an error");
+} catch (e) {
+    console.log(e.message);
+}
