@@ -1,12 +1,15 @@
-class MyCustomError extends Error {
-    constructor(message) {
-        super(message);
-        this.name = "MyError";
-    }
+function fetchUsername() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('JSUser');
+        }, 3000);
+    })
 }
 
-try {
-    throw new MyCustomError("This is an error");
-} catch (e) {
-    console.log(e.message);
-}
+console.log("Fetching username...");
+fetchUsername().then((value) => {
+    console.log(`You are logged in as ${value}`);
+})
+.finally(() => {
+    console.log("Welcome!");
+})
