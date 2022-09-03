@@ -9,3 +9,5 @@ if (stock > milkNeeded) {
 }
 
 console.log('Thank you');
+
+//testing 
