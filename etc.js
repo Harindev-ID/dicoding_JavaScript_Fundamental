@@ -1,11 +1,8 @@
-const stock = 0;
-const milkNeeded = 25;
-
-if (stock > milkNeeded) {
-  stock = stock - milkNeeded;
-  console.log('Processing your order...');
-} else {
-  console.log('Out of Stock!');
+function multiply(num) {
+    total = num * num;
 }
 
-console.log('Thank you');
+const result = multiply(3);
+
+console.log(result);
+//......
